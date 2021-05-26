@@ -70,7 +70,7 @@ body { font-family: sans-serif,Helvetica, Arial; line-height: 1.5; font-size: 93
 
 h1, h2, h3, h4, h5, h6 { font-family: Helvetica, sans-serif; font-weight: 900; line-height: 1.25; margin-top: 1em; margin-bottom: .5em; }
 
-p, dl, ol, ul { font-size: 14px; margin-top: 0; margin-bottom: 1rem; }
+p, dl, ol, ul { font-size: 15px; margin-top: 0; margin-bottom: 1rem; }
 
 ol, ul { padding-left: 2rem; }
 
@@ -147,7 +147,7 @@ h6, .h6 { font-size: 0.75rem; }
 .hljs-chunk { color: #ccc; }
 
 /* Basscss Color Base */
-body { color: #333; background-color: white; }
+body { color: #000; background-color: white; }
 
 a { color: #B509AC; text-decoration: none; }
 
@@ -411,7 +411,7 @@ top: -5%;*/ width: 500px; }
 .project .thumbnail a span p { color: #e8e8e8; }
 .project .thumbnail a:hover span { display: block; }
 
-.profile img { box-shadow: 0 0 2px #828282; width: 100%; }
+.profile img { box-shadow: 0 0 2px #828282; width: 80%; }
 
 .address { font-family: monospace; }
 .address p { margin: 0; }
@@ -741,12 +741,12 @@ p.topic-title {
   font-weight: bold;
 }
 div.topic {
-  margin: 2em;
+  margin: 0em;
 }
 .first {
   margin-top: 0 !important;
 }
-p { color: #333; line-height: 1.428571429; }
+p { color: #000; line-height: 1.428571429; }
 
 small, .small { font-size: 0.707rem; }
 

@@ -8,5 +8,6 @@ group :jekyll_plugins do
     gem 'jekyll-email-protect'
     gem 'jekyll-paginate'
     gem 'unicode_utils'
+    gem "webrick"
     #gem 'jekyll-katex'
 end
