@@ -66,11 +66,15 @@ img { max-width: 100%; }
 
 svg { max-height: 100%; }
 /* Basscss Base Typography */
-body { font-family: sans-serif,Helvetica, Arial; line-height: 1.5; font-size: 93%; }
+body { 
+  /* font-family: sans-serif,Helvetica, Arial;  */
+  line-height: 1.5; 
+  font-size: 93%; 
+}
 
 h1, h2, h3, h4, h5, h6 { font-family: Helvetica, sans-serif; font-weight: 900; line-height: 1.25; margin-top: 1em; margin-bottom: .5em; }
 
-p, dl, ol, ul { font-size: 15px; margin-top: 0; margin-bottom: 1rem; }
+p, dl, ol, ul { font-size: 16px; margin-top: 0; margin-bottom: 1rem; }
 
 ol, ul { padding-left: 2rem; }
 
@@ -734,7 +738,10 @@ table > tbody + tbody { border-top: 2px solid #333; }
 
 html { font-size: 16px; }
 
-body { color: #666; font-weight: 100; }
+body { 
+  /* color: #666;  */
+  font-weight: 100; 
+}
 
 abbr { border-bottom: 1px black dotted; cursor: help; }
 p.topic-title {
