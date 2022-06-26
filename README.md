@@ -103,6 +103,8 @@ Just use the liquid tags `{% highlight python %}` and `{% endhighlight %}` to de
 Feel free to contribute new features and theme improvements by sending a pull request.
 Style improvements and bug fixes are especially welcome.
 
+## links
+https://mkang32.github.io/2020/12/14/ruby-big-sur.html
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
