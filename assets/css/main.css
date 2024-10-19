@@ -66,6 +66,13 @@
   video {
     vertical-align: middle;
   }
+
+  .first-letter {
+    font-weight: bold;
+    font-size: 4em;
+    color: black;
+    line-height: 0.428571429;
+  }
   
   /*
    * Remove default fieldset styles.
@@ -589,3 +596,10 @@
 .news table .announcement a{font-size: 95%;color: blue; }
 .news table tr { text-align: left; }
 .news table td { padding: 4px 0; vertical-align: top; border: none; }
+
+.highlight {
+  background-color: white;  /* Highlight with a background color */
+  font-weight: bold;         /* Make the text bold */
+  color: black;                /* Change the text color */
+  padding: 0px;              /* Add some padding */
+}
