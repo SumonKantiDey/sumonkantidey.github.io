@@ -371,7 +371,7 @@
   }
   @media screen and (max-width: 600px) { 
     #main-profile-pic {
-      margin-left: 6%;
+      margin-left: 6%; 
     }
     #bio{
       margin-left: 14%;
