@@ -350,8 +350,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 50px;
-    margin-bottom: 30px; /* TODO Ask if wanted */
+    /* margin-top: 50px; */
+    /* margin-bottom: 30px; TODO Ask if wanted */
   }
   @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     #introduction-wrapper {
@@ -361,15 +361,21 @@
   
   #main-profile-pic {
     border-radius: 50%;
-    width: 200px;
+    width: 315px;
     display: inline-block;
     vertical-align: middle;
     margin: 10px auto;
-    margin-left: 7%;
+    margin-left: 12%;
+    margin-bottom: -4%;
+    filter: brightness(120%);
   }
   @media screen and (max-width: 600px) { 
     #main-profile-pic {
-      margin-left: 20%;
+      margin-left: 6%;
+    }
+    #bio{
+      margin-left: 14%;
+      margin-top: -2%;
     }
   }
 
@@ -380,7 +386,7 @@
     display: inline-block;
     vertical-align: middle;
     /* margin: 10px auto; */
-    margin-left: 15%;
+    /* margin-left: 15%; */
   }
   .author_name{
     margin-bottom: 0;
