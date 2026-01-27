@@ -274,8 +274,8 @@
   Custom styling here past the boilerplate
    */
   body {
-    font-size: 11pt;
-    font-family: Nunito;
+    /* font-size: 11pt; */
+    font-family: "Open Sans", sans-serif;
     line-height: 150%;
     max-width: 900px;
     margin: 0 auto !important;
