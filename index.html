@@ -40,29 +40,112 @@
     /*stuff for the scrollbar*/
     .scrollable {
       height: 400px;
-      /* or any value */
       overflow-y: scroll;
+      margin: 20px auto;
       margin-bottom: 5%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 12px;
     }
 
     .scrollarea-content {
       min-height: 101%;
     }
 
-    ul {
-      margin: auto;
+    .scrollable ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .scrollable li {
+      margin-bottom: 0;
+      padding: 5px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #333;
+      margin-top: -2px;
+    }
+
+    .scrollable li:first-child {
+      margin-top: 0;
+    }
+
+    .scrollable br {
+      display: none;
+    }
+
+    .scrollable li:last-child {
+      border-bottom: none;
+    }
+
+    .scrollable li a {
+      color: #380ca8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .scrollable li a:hover {
+      color: #2d0a7b;
+      text-decoration: underline;
     }
 
     ::-webkit-scrollbar {
       -webkit-appearance: none;
-      width: 7px;
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f5f5f5;
+      border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb {
-      border-radius: 4px;
-      background-color: rgba(0, 0, 0, .5);
-      box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+      border-radius: 5px;
+      background-color: #999;
     }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #666;
+    }
+
+    /* Section headings styling */
+    h2 {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    /* Top button styling */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #380ca8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(56, 12, 168, 0.2);
+      z-index: 100;
+    }
+
+    #topBtn:hover {
+      background-color: #2d0a7b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(56, 12, 168, 0.3);
+    }
+
+    /* Footer styling */
+    /* Moved to main.css */.footer {}
   </style>
 
 </head>
@@ -113,34 +196,32 @@
 
   <!--Website header-->
   <div id="introduction-wrapper">
-    <img id="main-profile-pic" src="/assets/img/new_img.png" alt="Sumon Kanti Dey">
+    <img id="main-profile-pic" src="/assets/img/new_img.png" alt="Sumon Kanti Dey" style="box-shadow: 0 8px 24px rgba(56, 12, 168, 0.15); transition: all 0.3s ease; margin-top: 0; margin-bottom: 12px;">
 
     <div id="bio">
-      <h1 class="author_name">Sumon Kanti Dey</h1>
-      <h3 class="author_school">PhD Student, Emory University</h3>
-      <p>sdey26 AT emory DOT edu <br>
-        sumonkantidey23 AT gmail.com</p>
+      <h1 class="author_name" style="font-size: 32px; font-weight: 700; color: #222; margin-top: 0; margin-bottom: 8px;">Sumon Kanti Dey</h1>
+      <h3 class="author_school" style="display: inline-block; background-color: #380ca8; color: white; font-weight: 600; font-size: 13px; padding: 6px 14px; border-radius: 20px; margin-top: 0; margin-bottom: 8px;">PhD Student, Emory University</h3>
+      <p style="font-size: 14px; color: #999; margin-bottom: 8px;">sdey26 AT emory DOT edu<br>sumonkantidey23 AT gmail.com</p>
       <!-- <p style="margin: 0"> <i class="fa-solid fa-envelope fa-lg"></i> &nbsp; kak5 (at) williams (dot) edu</p> -->
-      <p></p>
-      <div class="social">
-        <span class="schol"><a href="https://www.semanticscholar.org/author/Katherine-A.-Keith/145137850"><i
+      <div class="social" style="margin-top: 12px;">
+        <span class="schol"><a href="https://www.semanticscholar.org/author/Katherine-A.-Keith/145137850" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';"><i
               class="ai ai-semantic-scholar-square ai-2x"></i></a> &nbsp;&nbsp; </span>
-        <span class="gh"><a href="https://scholar.google.com/citations?user=3wmPgEEAAAAJ&hl=en"><i
+        <span class="gh"><a href="https://scholar.google.com/citations?user=3wmPgEEAAAAJ&hl=en" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i
               class="ai ai-google-scholar-square ai-2x"></i> </a> &nbsp;&nbsp; </span>
-        <span class="lin"><a href="https://www.linkedin.com/in/sumon-kanti-dey-96321b10b/"><i
+        <span class="lin"><a href="https://www.linkedin.com/in/sumon-kanti-dey-96321b10b/" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i
               class="fa-brands fa-linkedin fa-2x"></i></a> &nbsp;&nbsp;</span>
-        <span class="gh"><a href="https://github.com/SumonKantiDey"><i class="fa-brands fa-github fa-2x"></i></i></a>
+        <span class="gh"><a href="https://github.com/SumonKantiDey" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i class="fa-brands fa-github fa-2x"></i></i></a>
           &nbsp;&nbsp;</span>
-        <span class="twit"><a href="https://x.com/sumonkantidey23"><i class="fab fa-twitter-square fa-2x"></i></a>
+        <span class="twit"><a href="https://x.com/sumonkantidey23" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i class="fab fa-twitter-square fa-2x"></i></a>
           &nbsp;&nbsp; </span>
       </div>
     </div>
   </div>
 
-  <div id="main">
+  <div id="main" style="max-width: 900px; margin: 40px auto 0; padding: 0 20px;">
     <!-- Main bio  -->
     <div>
-      <p>👋 Hi I am Sumon Kanti Dey
+      <p style="line-height: 1.75; font-size: 16px; color: #333; max-width: 100%; letter-spacing: 0.3px; margin-bottom: 20px;">👋 Hi I am Sumon Kanti Dey
         <br>
         I am a PhD student in Computer Science and Informatics at Emory University, fortunate to be advised by <a
           href="https://azraismail.me/">Prof. Azra Ismail</a>.
@@ -168,7 +249,7 @@
     </div>
   </div>
 
-  <h2>Recent News</h2>
+  <h2 style="text-align: left; margin-top: 30px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #222; color: #222;">Recent News</h2>
   <div class="scrollable">
     <div id='scrollarea-content'>
       <ul>
@@ -288,7 +369,7 @@
 
 
   <div class="footer">
-    © Copyright 2024 Sumon Kanti Dey.
+    © Copyright 2024 <strong>Sumon Kanti Dey</strong>. All rights reserved.
   </div>
 
   <!-- Load jQuery -->
