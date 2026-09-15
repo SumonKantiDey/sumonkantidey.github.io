@@ -275,7 +275,7 @@
    */
   body {
     /* font-size: 11pt; */
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nunito", "Helvetica Neue", Arial, sans-serif;
     line-height: 150%;
     max-width: 900px;
     margin: 0 auto !important;
@@ -284,7 +284,8 @@
   }
   
   a {
-    color: #380ca8;
+    /* color: #380ca8; */
+    color: #D45270;
     text-decoration: none;
   }
   
@@ -376,6 +377,8 @@
     padding: 8px 30px 15px 30px;
     margin-top: 60px;
     margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 65px;
     border-radius: 12px;
     background: linear-gradient(135deg, #fafbfd 0%, #f5f7fc 100%);
     border: 1px solid #efefef;
@@ -430,7 +433,63 @@
   .author_school{
     margin-top: 10px;
   }
-  
+  .bio-text {
+    line-height: 1.75;
+    font-size: 16px;
+    color: #333;
+    max-width: 100%;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+  }
+  .bio-text-muted {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+  }
+  .research-areas {
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .research-areas li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+  }
+  .paper-tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #380ca8;
+    background: #f0ebfb;
+    border-radius: 12px;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+  }
+  .paper-tag:hover {
+    background: #380ca8;
+    color: #fff;
+  }
+  .paper-tag-pending {
+    color: #888;
+    background: #f0f0f0;
+  }
+  .citation-link {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .citation-link:focus-visible {
+    outline: 2px solid #380ca8;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
   #menu {
     display: table;
     width: 100%;

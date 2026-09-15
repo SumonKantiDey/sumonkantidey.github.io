@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mathjax Support -->
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSRSZHJEZT"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-QSRSZHJEZT');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#fafafa">
+
+  <title>Sumon Kanti Dey</title>
+  <meta name="description" content="Selected & Ongoing Research — Sumon Kanti Dey">
+
+  <link rel="shortcut icon" href="/assets/favicon_io_2/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+  <script src="https://kit.fontawesome.com/f1a62b90a7.js" crossorigin="anonymous"></script>
+
+  <!-- Page-specific styling for the research listing -->
+  <style>
+    /* Same box model as #introduction-wrapper on the homepage: a direct child of
+       <body> (which is max-width:900px, centered), so this container renders at
+       the exact same width as the intro card, regardless of its own padding. */
+    #research-page {
+      max-width: 900px;
+      margin: 60px auto 20px;
+      padding: 0 30px;
+      box-sizing: border-box;
+    }
+
+    .research-page-header {
+      margin-bottom: 28px;
+    }
+
+    .research-page-header h1 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #222;
+      margin: 0 0 10px;
+    }
+
+    .research-page-header .research-page-subtitle {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #666;
+      max-width: 700px;
+      margin: 0;
+    }
+
+    .research-section {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .research-card {
+      position: relative;
+      background: linear-gradient(135deg, #fafbfd 0%, #f5f7fc 100%);
+      border: 1px solid #efefef;
+      border-left: 4px solid #380ca8;
+      border-radius: 12px;
+      padding: 22px 26px;
+      box-shadow: 0 2px 8px rgba(56, 12, 168, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(56, 12, 168, 0.14);
+    }
+
+    .research-card.status-submitted { border-left-color: #0a63b3; }
+    .research-card.status-under-review { border-left-color: #b3690a; }
+
+    .research-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .research-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #222;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .status-badge {
+      flex-shrink: 0;
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .status-ongoing {
+      background-color: #f1ecfc;
+      color: #380ca8;
+    }
+
+    .status-submitted {
+      background-color: #e7f1fc;
+      color: #0a63b3;
+    }
+
+    .status-under-review {
+      background-color: #fff4e5;
+      color: #b3690a;
+    }
+
+    .research-desc {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #444;
+      margin: 0 0 14px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+      background-color: #ffffff;
+      border: 1px solid #e5e5ef;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .paper-link {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed #e5e5ef;
+      font-size: 13.5px;
+    }
+
+    .paper-link a {
+      color: #380ca8;
+      font-weight: 600;
+    }
+
+    .paper-link a:hover {
+      color: #2d0a7b;
+    }
+
+    .paper-link .venue {
+      color: #888;
+    }
+
+    @media screen and (max-width: 600px) {
+      #research-page {
+        margin-top: 30px;
+        padding: 0 20px;
+      }
+
+      .research-card {
+        padding: 18px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrapper">
+      <span class="site-title">
+        <strong>Sumon Kanti Dey</strong>
+      </span>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242"
+                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z">
+              </path>
+              <path fill="#424242"
+                d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z">
+              </path>
+              <path fill="#424242"
+                d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z">
+              </path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- About -->
+          <a class="page-link" href="/">About</a>
+          <!-- Blog -->
+          <a class="page-link" href="/blog/">Blog</a>
+          <!-- Pages -->
+          <a class="page-link" href="/projects/">Projects</a>
+          <!-- CV -->
+          <a class="page-link" href="/assets/pdf/Sumon_Kanti_Dey_Resume.pdf">Resume</a>
+          <a class="page-link" href="/publications/">Publications</a>
+          <a class="page-link" href="/Upcoming Conference/">Upcoming Conference</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div id="research-page">
+
+    <header class="research-page-header">
+      <h1>Selected &amp; Ongoing Research</h1>
+      <p class="research-page-subtitle">
+        A snapshot of work in progress — spanning trustworthy health AI, multilingual evaluation,
+        and human-centered, agentic, and conversational systems for sensitive health contexts.
+      </p>
+    </header>
+
+    <div class="research-section">
+
+      <!-- SRHBench -->
+      <div class="research-card status-ongoing">
+        <div class="research-card-head">
+          <h3>SRHBench: Multilingual Benchmarking for Women's Health AI</h3>
+          <span class="status-badge status-ongoing">Ongoing Research</span>
+        </div>
+        <p class="research-desc">
+          Developing a multilingual evaluation benchmark for women's and sexual and reproductive health AI,
+          with evaluation across medical accuracy, safety, contextual relevance, cultural alignment, clarity,
+          and practical usefulness.
+        </p>
+        <div class="tags">
+          <span class="tag">LLM Evaluation</span>
+          <span class="tag">Benchmarking</span>
+          <span class="tag">Women's Health</span>
+          <span class="tag">Multilingual AI</span>
+        </div>
+
+        <!-- Add publication link here when published -->
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">Conference/Journal Name, Year</span>
+        </div>
+        -->
+      </div>
+
+      <!-- Hidden Labor -->
+      <div class="research-card status-submitted">
+        <div class="research-card-head">
+          <h3>Hidden Labor Behind Community-Generated Health Datasets</h3>
+          <span class="status-badge status-submitted">Submitted</span>
+        </div>
+        <p class="research-desc">
+          Examining the human labor, training, language negotiation, privacy concerns, facilitation,
+          and coordination involved in producing multilingual community-generated health datasets.
+        </p>
+        <div class="tags">
+          <span class="tag">Human-Centered AI</span>
+          <span class="tag">Responsible Data</span>
+          <span class="tag">Community AI</span>
+          <span class="tag">HCI</span>
+        </div>
+
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">CHI 2027</span>
+        </div>
+        -->
+      </div>
+
+      <!-- Healthcare LLM Evaluation -->
+      <div class="research-card status-submitted">
+        <div class="research-card-head">
+          <h3>Understanding LLM Evaluation Practices in Healthcare</h3>
+          <span class="status-badge status-submitted">Submitted</span>
+        </div>
+        <p class="research-desc">
+          Studying how clinicians, researchers, and healthcare stakeholders evaluate LLM-based systems,
+          including the metrics, expertise, workflows, and organizational constraints that shape evaluation.
+        </p>
+        <div class="tags">
+          <span class="tag">LLM Evaluation</span>
+          <span class="tag">Healthcare AI</span>
+          <span class="tag">Human Evaluation</span>
+          <span class="tag">HCI</span>
+        </div>
+
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">CHI 2027</span>
+        </div>
+        -->
+      </div>
+
+      <!-- Voice Benchmark -->
+      <div class="research-card status-ongoing">
+        <div class="research-card-head">
+          <h3>Multilingual Voice Benchmarking for Health AI</h3>
+          <span class="status-badge status-ongoing">Ongoing Research</span>
+        </div>
+        <p class="research-desc">
+          Developing multilingual voice-based evaluation resources for Hindi, Hinglish, Marathi, and Minglish
+          to study how healthcare AI systems perform across languages, code-mixing, and speech modalities.
+        </p>
+        <div class="tags">
+          <span class="tag">Voice AI</span>
+          <span class="tag">Multilingual AI</span>
+          <span class="tag">Health NLP</span>
+          <span class="tag">Benchmarking</span>
+        </div>
+
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">Conference/Journal, Year</span>
+        </div>
+        -->
+      </div>
+
+      <!-- Agentic Judge -->
+      <div class="research-card status-ongoing">
+        <div class="research-card-head">
+          <h3>Agentic LLM-as-a-Judge for Healthcare Evaluation</h3>
+          <span class="status-badge status-ongoing">Ongoing Research</span>
+        </div>
+        <p class="research-desc">
+          Designing an agentic evaluation framework for healthcare data and AI systems that supports
+          structured, multidimensional, and more reliable LLM-as-a-judge evaluation.
+        </p>
+        <div class="tags">
+          <span class="tag">Agentic AI</span>
+          <span class="tag">LLM-as-a-Judge</span>
+          <span class="tag">Healthcare Evaluation</span>
+        </div>
+
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">Conference/Journal, Year</span>
+        </div>
+        -->
+      </div>
+
+      <!-- IPV Agent -->
+      <div class="research-card status-ongoing">
+        <div class="research-card-head">
+          <h3>Voice-Based Conversational Agent for Sensitive IPV Interviews</h3>
+          <span class="status-badge status-ongoing">Ongoing Research</span>
+        </div>
+        <p class="research-desc">
+          Exploring voice-based conversational AI for structured interviews in sensitive intimate partner
+          violence contexts, with attention to safety, privacy, and human oversight.
+        </p>
+        <div class="tags">
+          <span class="tag">Conversational AI</span>
+          <span class="tag">Voice AI</span>
+          <span class="tag">Women's Health</span>
+          <span class="tag">Responsible AI</span>
+        </div>
+
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">Conference/Journal, Year</span>
+        </div>
+        -->
+      </div>
+
+      <!-- Mental Health Agent -->
+      <div class="research-card status-ongoing">
+        <div class="research-card-head">
+          <h3>Voice-Based Conversational Agent for Mental Health Interviews</h3>
+          <span class="status-badge status-ongoing">Ongoing Research</span>
+        </div>
+        <p class="research-desc">
+          Designing a voice-based conversational system to support structured interviews in mental health
+          research, with emphasis on safe interaction, consistency, and appropriate human oversight.
+        </p>
+        <div class="tags">
+          <span class="tag">Conversational AI</span>
+          <span class="tag">Voice AI</span>
+          <span class="tag">Mental Health</span>
+          <span class="tag">Human-AI Interaction</span>
+        </div>
+
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">Conference/Journal, Year</span>
+        </div>
+        -->
+      </div>
+
+      <!-- Menopause -->
+      <div class="research-card status-under-review">
+        <div class="research-card-head">
+          <h3>Understanding Menopause Experiences Through Social Media Data</h3>
+          <span class="status-badge status-under-review">Under Review</span>
+        </div>
+        <p class="research-desc">
+          Analyzing social media discussions to understand experiences, concerns, information needs,
+          and health communication around menopause.
+        </p>
+        <div class="tags">
+          <span class="tag">Women's Health</span>
+          <span class="tag">Social Media NLP</span>
+          <span class="tag">Health NLP</span>
+        </div>
+
+        <!--
+        <div class="paper-link">
+          <a href="PAPER_LINK" target="_blank">Paper</a> &middot;
+          <span class="venue">Conference/Journal, Year</span>
+        </div>
+        -->
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    © Copyright 2024 <strong>Sumon Kanti Dey</strong>. All rights reserved.
+  </div>
+
+  <!-- Load jQuery -->
+  <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="/assets/js/common.js"></script>
+
+  <!-- Load KaTeX -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+  <script src="/assets/js/katex.js"></script>
+
+  <!-- Include custom icon fonts -->
+  <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-27273977-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+
+</html>

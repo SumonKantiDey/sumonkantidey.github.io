@@ -81,7 +81,7 @@
       border-bottom: none;
     }
 
-    .scrollable li a {
+    /* .scrollable li a {
       color: #380ca8;
       text-decoration: none;
       font-weight: 500;
@@ -90,7 +90,7 @@
     .scrollable li a:hover {
       color: #2d0a7b;
       text-decoration: underline;
-    }
+    } */
 
     ::-webkit-scrollbar {
       -webkit-appearance: none;
@@ -146,6 +146,32 @@
 
     /* Footer styling */
     /* Moved to main.css */.footer {}
+
+    /* Shared content column — keeps every section (bio, news, ...) aligned
+       to the same left/right edges below the intro card. */
+    .content-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    /* Social icon hover behavior (was duplicated inline on every icon) */
+    .social a {
+      transition: all 0.3s ease;
+      color: #380ca8;
+      display: inline-block;
+    }
+
+    .social a:hover {
+      color: #2d0a7b;
+      transform: scale(1.3);
+    }
+
+    section + section,
+    .content-wrap + h2 {
+      margin-top: 40px;
+    }
   </style>
 
 </head>
@@ -188,8 +214,7 @@
           <a class="page-link" href="/publications/">Publications</a>
           <a class="page-link" href="/Upcoming Conference/">Upcoming Conference</a>
         </div>
-    </div>
-    </nav>
+      </nav>
     </div>
   </header>
 
@@ -204,53 +229,81 @@
       <p style="font-size: 14px; color: #999; margin-bottom: 8px;">sdey26 AT emory DOT edu<br>sumonkantidey23 AT gmail.com</p>
       <!-- <p style="margin: 0"> <i class="fa-solid fa-envelope fa-lg"></i> &nbsp; kak5 (at) williams (dot) edu</p> -->
       <div class="social" style="margin-top: 12px;">
-        <span class="schol"><a href="https://www.semanticscholar.org/author/Katherine-A.-Keith/145137850" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';"><i
+        <span class="schol"><a href="https://www.semanticscholar.org/author/Katherine-A.-Keith/145137850"><i
               class="ai ai-semantic-scholar-square ai-2x"></i></a> &nbsp;&nbsp; </span>
-        <span class="gh"><a href="https://scholar.google.com/citations?user=3wmPgEEAAAAJ&hl=en" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i
+        <span class="gh"><a href="https://scholar.google.com/citations?user=3wmPgEEAAAAJ&hl=en"><i
               class="ai ai-google-scholar-square ai-2x"></i> </a> &nbsp;&nbsp; </span>
-        <span class="lin"><a href="https://www.linkedin.com/in/sumon-kanti-dey-96321b10b/" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i
+        <span class="lin"><a href="https://www.linkedin.com/in/sumon-kanti-dey-96321b10b/"><i
               class="fa-brands fa-linkedin fa-2x"></i></a> &nbsp;&nbsp;</span>
-        <span class="gh"><a href="https://github.com/SumonKantiDey" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i class="fa-brands fa-github fa-2x"></i></i></a>
+        <span class="gh"><a href="https://github.com/SumonKantiDey"><i class="fa-brands fa-github fa-2x"></i></a>
           &nbsp;&nbsp;</span>
-        <span class="twit"><a href="https://x.com/sumonkantidey23" style="transition: all 0.3s ease; color: #380ca8; display: inline-block;" onmouseover="this.style.color='#2d0a7b'; this.style.transform='scale(1.3)';" onmouseout="this.style.color='#380ca8'; this.style.transform='scale(1)';" ><i class="fab fa-twitter-square fa-2x"></i></a>
+        <span class="twit"><a href="https://x.com/sumonkantidey23"><i class="fab fa-twitter-square fa-2x"></i></a>
           &nbsp;&nbsp; </span>
       </div>
     </div>
   </div>
 
-  <div id="main" style="max-width: 900px; margin: 40px auto 0; padding: 0 20px;">
-    <!-- Main bio  -->
+  <div id="main" class="content-wrap" style="margin-top: 40px;">
+    <!-- Main bio -->
     <div>
-      <p style="line-height: 1.75; font-size: 16px; color: #333; max-width: 100%; letter-spacing: 0.3px; margin-bottom: 20px;">👋 Hi I am Sumon Kanti Dey
-        <br>
-        I am a PhD student in Computer Science and Informatics at Emory University, fortunate to be advised by <a
-          href="https://azraismail.me/">Prof. Azra Ismail</a>.
+      <p style="line-height: 1.75; font-size: 16px; color: #333; max-width: 100%; letter-spacing: 0.3px; margin-bottom: 20px;">
 
-        My research focuses on the intersection of healthcare, natural language processing (NLP), and human-computer
-        interaction (HCI). I am particularly interested in developing fair and inclusive AI systems to improve health
-        equity and outcomes for underserved communities. I also explore human behavior and wellbeing through social media 
-        and online data, uncovering insights to design meaningful, human-centered solutions.
+        👋 Hi, I am <strong>Sumon Kanti Dey</strong>, a third-year PhD student in Computer Science and Informatics at
+        Emory University, fortunate to be advised by
+        <a href="https://azraismail.me/" target="_blank">Prof. Azra Ismail</a>. My research focuses on <strong>trustworthy and human-centered AI for healthcare</strong>,
+        with an emphasis on rigorously evaluating and safely deploying large language models in
+        <strong>sensitive and high-consequence health contexts</strong>. 
 
-        <br> <br>
-        Prior to starting my PhD, I worked as a data scientist for two Singapore-based startups: LeadBook, a sales
-        intelligence company, and Evco, an electric mobility service startup.
-        I had the opportunity to intern remotely at the Vis4Sense research group, where I worked under the
-        guidance of <a href="https://kaixu.me/">Professor Kai Xu</a>. During my internship, I focused on a variety of
-        areas,
-        including Data Science, Visual Analytics, HCI, and NLP. I was responsible for implementing
-        machine-learning models and visualization techniques to personalize the browsing experience
-        of users and analyze their interests and goals. I did my undergrad in Computer Science
-        at <a href="https://nstu.edu.bd/">Noakhali Science and Technology University</a> in <a
-          href="https://en.wikipedia.org/wiki/Bangladesh">Bangladesh </a>.
         <br><br>
-        In my spare time, I enjoy participating in Kaggle competitions and exploring Kaggle datasets.
-        I am an amiable person with simple thoughts. I love music, and I enjoy playing the violin.
+
+        <!-- My research focuses on developing and evaluating
+        <strong>trustworthy AI for sensitive and high-consequence healthcare contexts</strong>.
+        I am particularly interested in evaluation approaches that move beyond conventional model accuracy to
+        consider
+        <strong>safety, cultural and contextual relevance, practical usefulness, and human judgment</strong>. -->
+
+  
+        
+        <!-- I am particularly interested in evaluation approaches that move beyond conventional model accuracy to consider<strong> safety, cultural and contextual relevance, practical usefulness, and human judgment</strong>. -->
+
+        <!-- <br><br> -->
+
+        My work spans
+        <strong>LLM Evaluation &amp; Trustworthy Health AI</strong>
+        [<a class="citation-link" href="https://aclanthology.org/2025.eval4nlp-1.11/" target="_blank">Eval4NLP'25</a>],
+
+        <strong>Human-Centered &amp; Responsible Health AI</strong>
+        <!-- [CHI ’27, submitted] -->,
+
+        <strong>Multilingual &amp; Multimodal Health AI</strong>
+        [<a class="citation-link" href="https://www.jmir.org/2026/1/e86545/" target="_blank">JMIR'26</a>],
+
+        <strong>Conversational &amp; Agentic AI for Health</strong>,
+
+        and <strong>Health NLP &amp; Social Media</strong>
+        [<a class="citation-link" href="https://www.worldscientific.com/doi/10.1142/9789819824755_0002" target="_blank">PSB'26</a>].
+
+        <br><br>
+        Across these areas, I develop benchmarks, evaluation frameworks, multilingual and voice-based resources, and
+        conversational AI systems for <strong>diverse healthcare settings</strong>,
+        including sexual and reproductive health, intimate partner violence, mental health, substance use, and
+        women's health.
+        My broader goal is to create healthcare AI that can operate <strong>safely, meaningfully, and responsibly in
+          real-world settings</strong>.
+
+        <br><br>
+
+        My earlier research explored <strong>Bengali NLP and online hate-speech detection</strong>
+        [<a class="citation-link" href="https://ieeexplore.ieee.org/abstract/document/9564230/" target="_blank">DSAA'21</a>,
+        <a class="citation-link" href="https://d1wqtxts1xzle7.cloudfront.net/113763040/2204-libre.pdf?1714047631=&response-content-disposition=inline%3B+filename%3DMultimodal_Hate_Speech_Detection_from_Be.pdf&Expires=1789385396&Signature=WhjqNWVcU1uePzxQFU0~x-J9Gvq70ES6lVq2CsH6gaVSRtp3lEeEVL8EHxNCsi1XVLQ~ho4AsSydzb598zNKgZvILsBL7i~4U7lxkjmDPPkHOx1fsuGkyKi7FKBw1LNrcVdSVF40pnP7Xm4DKpGh9L7E1G~uBsD8C0Oat6efc3tVYFrmiLETxW90W6j9tGXKxhp1ud1aK5kUJvweWRmdd9jcbbZTpLqQ3NMn1MqX2WibDnVZw-eMJ9xieUz9D2MjuIw2zXtunodhk15egL64dnYn4w~XfXUw25Toj4gQLb9fx2gKa3lXV367qGkqtOlO-3dgr4~G6sU7veG-QVLaXA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank">SPELLL'22</a>],
+        which helped shape my broader interest in socially consequential and culturally aware language technologies.
       </p>
     </div>
   </div>
 
-  <h2 style="text-align: left; margin-top: 30px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #222; color: #222;">Recent News</h2>
-  <div class="scrollable">
+  <div class="content-wrap">
+    <h2 style="text-align: left; margin-top: 30px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #222; color: #222;">Recent News</h2>
+    <div class="scrollable">
     <div id='scrollarea-content'>
       <ul>
         <li>
